@@ -1,0 +1,9 @@
+# Default ignored files
+/shelf/
+/workspace.xml
+
+
+# Spring Boot specific
+target/
+bin/
+out/

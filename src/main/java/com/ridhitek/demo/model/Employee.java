@@ -7,7 +7,7 @@ import lombok.Setter;
 @Setter
 @Getter
 @Entity
-@Table(name = "employees")  // Ensure the table name matches in the database
+@Table(name = "employees", schema = "employee_db")  // Ensure the table name matches in the database
 public class Employee {
 
     // Getters and Setters

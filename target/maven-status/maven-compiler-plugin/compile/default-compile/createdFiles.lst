@@ -1,9 +1,0 @@
-com\ridhitek\demo\config\EmployeeDatabaseConfig.class
-com\ridhitek\demo\repository\EmployeeRepository.class
-com\ridhitek\demo\model\Employee.class
-com\ridhitek\demo\SpringBootEmployeeAppApplication.class
-com\ridhitek\demo\config\PropertyDebugger.class
-com\ridhitek\demo\config\CorsConfig.class
-com\ridhitek\demo\config\EmployeeAppConfig.class
-com\ridhitek\demo\controller\EmployeeController.class
-com\ridhitek\demo\service\EmployeeService.class

@@ -12,8 +12,11 @@ import java.util.List;
 @RequestMapping("/api/employees")
 public class EmployeeController {
 
-    @Autowired
-    private EmployeeService employeeService;
+    public final EmployeeService employeeService;
+
+    public EmployeeController(EmployeeService employeeService) {
+        this.employeeService = employeeService;
+    }
 
     @GetMapping
     public List<Employee> getAllEmployees() {
@@ -26,14 +29,14 @@ public class EmployeeController {
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<Employee> updateEmployee(@PathVariable Long id, @RequestBody Employee employeeDetails) {
+    public ResponseEntity<Employee> updateEmployee(@PathVariable("id") Long id, @RequestBody Employee employeeDetails) {
         Employee updatedEmployee = employeeService.updateEmployee(id, employeeDetails);
         return ResponseEntity.ok(updatedEmployee);
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<Void> deleteEmployee(@PathVariable Long id) {
+    public ResponseEntity<Void> deleteEmployee(@PathVariable("id") Long id) {
         employeeService.deleteEmployee(id);
         return ResponseEntity.noContent().build();
     }
-}
+};

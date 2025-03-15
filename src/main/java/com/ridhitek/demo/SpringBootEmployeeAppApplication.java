@@ -2,13 +2,14 @@ package com.ridhitek.demo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.autoconfigure.domain.EntityScan;
+import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
-@EntityScan(basePackages = "com.ridhitek.demo.model")
+@ComponentScan(basePackages = {"com.ridhitek.demo", "com.ridhitek.audit"})  // Ensure Employee and Audit Beans are loaded
 public class SpringBootEmployeeAppApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(SpringBootEmployeeAppApplication.class, args);
     }
+
 }

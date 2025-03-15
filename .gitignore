@@ -1,0 +1,19 @@
+# Default ignored files
+/shelf/
+/.idea/workspace.xml
+
+
+# Spring Boot specific
+target/
+bin/
+out/
+
+# Eclipse specific files
+/.classpath
+/.project
+/.settings/
+
+# VS Code specific files
+/.vscode/
+
+.idea/compiler.xml

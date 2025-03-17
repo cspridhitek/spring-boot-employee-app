@@ -1,6 +1,5 @@
 package com.ridhitek.demo.config;
 
-import com.ridhitek.audit.audit.AuditInterceptor;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceProperties;
@@ -49,15 +48,14 @@ public class EmployeeDatabaseConfig {
         // Hibernate properties
         Properties properties = new Properties();
         properties.put("hibernate.hbm2ddl.auto", "update"); // Update schema automatically
-
-        //  Attach AuditInterceptor dynamically
-        try {
-            AuditInterceptor auditInterceptor = context.getBean(AuditInterceptor.class);
-            properties.put("hibernate.session_factory.interceptor", auditInterceptor);
-            System.out.println("AuditInterceptor attached successfully!");
-        } catch (Exception e) {
-            System.out.println("AuditInterceptor bean not found, skipping attachment.");
-        }
+//
+//        //  Attach AuditInterceptor dynamically
+//        try {
+//            properties.put("hibernate.session_factory.interceptor", auditInterceptor);
+//            System.out.println("AuditInterceptor attached successfully!");
+//        } catch (Exception e) {
+//            System.out.println("AuditInterceptor bean not found, skipping attachment.");
+//        }
         em.setJpaProperties(properties);
 
         return em;

@@ -2,7 +2,6 @@ package com.ridhitek.demo.controller;
 
 import com.ridhitek.demo.model.Employee;
 import com.ridhitek.demo.service.EmployeeService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
